@@ -1,0 +1,6 @@
+﻿{
+  "DataConnectionString": "Data Source=LEON;Initial Catalog=nopCommerceDB;Integrated Security=True;Persist Security Info=False",
+  "DataProvider": "sqlserver",
+  "SQLCommandTimeout": null,
+  "RawDataSettings": {}
+}
