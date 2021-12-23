@@ -2390,7 +2390,7 @@ button {
 
 .std {
     width: 700px;
-    height: 3800px;
+    height: 3550px;
     color: black;
     font-size: 14px;
     font-family: "Open Sans", sans-serif;
@@ -2398,7 +2398,7 @@ button {
 }
 
 .cellsBlockImage {
-    width: 700px;
+    width: 720px;
     height: 150px;
     padding: 10px 0px 0px;
     color: black;
@@ -2478,3 +2478,163 @@ button {
     margin: 15px;
 }
 
+.korichnik-nastojawij
+{
+    width: 140px !important;
+    height: 131px !important;
+}
+
+
+.aloje-vera {
+    width: 75px !important;
+    height: 140px !important;
+}
+
+.tysjachelistnik-obyknovennyj
+{
+    width: 75px !important;
+    height: 140px !important;
+}
+
+.solodka-golaja
+{
+    width: 101px !important;
+    height: 140px !important;
+}
+
+.sliva-pozdnjaja
+{
+    width: 118px !important;
+    height: 140px !important;
+}
+
+.perec-ovownoj
+{
+    width: 75px !important;
+    height: 140px !important;
+}
+
+.kardamon-nastojawij
+{
+    width: 80px !important;
+    height: 140px !important;
+}
+
+.jeleuterokok-koljuchij
+{
+    width: 81px !important;
+    height: 140px !important;
+}
+
+.klever-lugovoj
+{
+    width: 95px !important;
+    height: 140px !important;
+}
+
+.hvow-polevoj
+{
+    width: 86px !important;
+    height: 140px !important;
+}
+
+.lavanda
+{
+    width: 83px !important;
+    height: 140px !important;
+}
+
+.chabrec
+{
+    width: 100px !important;
+    height: 140px !important;
+}
+
+.shipovnik
+{
+    width: 112px !important;
+    height: 140px !important;
+}
+
+.krasnye-vodorosli
+{
+    width: 140px !important;
+    height: 100px !important;
+}
+
+.fukus
+{
+    width: 118px !important;
+    height: 140px !important;
+}
+
+.gorechevka-zheltaja
+{
+    width: 108px !important;
+    height: 140px !important;
+}
+
+.strastocvet
+{
+    width: 96px !important;
+    height: 140px !important;
+}
+
+.krestovyj-koren
+{
+    width: 96px !important;
+    height: 140px !important;
+}
+
+.ljucerna 
+{
+    width: 112px !important;
+    height: 140px !important;
+}
+
+.zensen
+{
+    width: 48px !important;
+    height: 140px !important;
+}
+
+.ginkgo-biloba
+{
+    width: 91px !important;
+    height: 140px !important;
+}
+
+.fenhel
+{
+    width: 102px !important;
+    height: 140px !important;
+}
+
+.centela
+{
+    width: 131px !important;
+    height: 140px !important;
+}
+
+.guarana
+{
+    width: 107px !important;
+    height: 140px !important;
+}
+
+.gorec
+{
+    width: 104px !important;
+    height: 140px !important;
+}
+
+.poskonnik {
+    width: 109px !important;
+    height: 140px !important;
+}
+
+/*Галочка для листа*/
+
+ul {
+    list-style-image: url('/images/uploaded/GALOCHKA.png');
+}
