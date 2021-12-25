@@ -2638,3 +2638,11 @@ button {
 ul {
     list-style-image: url('/images/uploaded/GALOCHKA.png');
 }
+
+/*Флаги*/
+
+.flagsOfManufacturers
+{
+    width: 20px !important;
+    height: 12px !important;
+}
