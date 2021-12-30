@@ -6,9 +6,13 @@
 
 /* Web Styles for nopAccelerate Noble Theme */
 
-body{font-family: 'Open Sans', sans-serif;background:#f6f6f6;color:#646464;}
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #f6f6f6;
+    color: #000000;
+}
 ul{margin:0px;padding:0px;}
-li{list-style:none;}
+/*li{list-style:none;}*/
 a,.owl-prev,.owl-next,.login-page .remember-me .checkbox label{transition:all 0.3s ease-in-out 0s;-webkit-transition:all 0.3s ease-in-out 0s;-moz-transition:all 0.3s ease-in-out 0s;-o-transition:all 0.3s ease-in-out 0s;text-decoration:none;}
 .admin-header-links a{color:#fff;}
 .provider-verification .buttons .save-customer-info-button, .multi-factor-authentication-page .save-customer-info-button, .multi-factor-authentication-config-page .save-customer-info-button{display: inline-block; padding: 6px 12px; margin-bottom: 0; line-height: 1.42857143; text-align: center; white-space: nowrap; vertical-align: middle; -ms-touch-action: manipulation; touch-action: manipulation; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
@@ -2646,3 +2650,5 @@ ul {
     width: 20px !important;
     height: 12px !important;
 }
+
+/*COMMENTED THE CLASS : li{list-style:none;} AT THE 11-th LINE*/             
