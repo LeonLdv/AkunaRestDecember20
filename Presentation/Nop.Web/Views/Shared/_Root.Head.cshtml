@@ -46,6 +46,13 @@
 <!DOCTYPE html>
 <html lang="@languageService.GetTwoLetterIsoLanguageName(await workContext.GetWorkingLanguageAsync())" @(await this.ShouldUseRtlThemeAsync() ? Html.Raw(" dir=\"rtl\"") : null) @Html.NopPageCssClasses()>
 <head>
+
+    @*<script type="text/javascript">
+        $(window).load(function() {
+            $(".loaderClass").fadeOut("slow");                           // Loader, doesn't work.
+        })
+            </script>*@
+
     <title>@Html.NopTitle()</title>
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
     <meta name="description" content="@(Html.NopMetaDescription())" />
@@ -71,6 +78,7 @@
     <!--Powered by nopCommerce - https://www.nopCommerce.com-->
 </head>
 <body>
+    @*<div class="loaderClass"></div>*@                                            
     @RenderBody()
     @Html.NopCssFiles(ResourceLocation.Footer)
     @Html.NopScripts(ResourceLocation.Footer)

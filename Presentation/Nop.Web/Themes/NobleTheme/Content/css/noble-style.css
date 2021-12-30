@@ -2651,4 +2651,14 @@ ul {
     height: 12px !important;
 }
 
-/*COMMENTED THE CLASS : li{list-style:none;} AT THE 11-th LINE*/             
+/*COMMENTED THE CLASS : li{list-style:none;} AT THE 11-th LINE*/
+
+/*.loaderClass {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;                                                                                // Loader, doesn't work.
+    height: 100%;
+    z-index: 9999;
+    background: url('../images/loading.gif') 50% 50% no-repeat rgb(249,249,249);
+}*/
