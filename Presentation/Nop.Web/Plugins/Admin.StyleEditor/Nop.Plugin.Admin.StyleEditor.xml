@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nop.Plugin.Admin.StyleEditor</name>
+    </assembly>
+    <members>
+        <member name="T:Nop.Plugin.Admin.StyleEditor.Areas.Admin.Controllers.StyleEditorController">
+            <summary>
+            Controller for handling actions to configure and view the StyleEditor widget
+            </summary>
+        </member>
+        <member name="M:Nop.Plugin.Admin.StyleEditor.Areas.Admin.Controllers.StyleEditorController.#ctor(Nop.Services.Security.IPermissionService,Nop.Services.Messages.INotificationService,Nop.Services.Localization.ILocalizationService,Nop.Services.Configuration.ISettingService,Nop.Plugin.Admin.StyleEditor.Settings.StyleEditorSettings,Nop.Plugin.Admin.StyleEditor.Helpers.ICurrentDateTimeHelper)">
+            <summary>
+            Creates an instance of the <see cref="T:Nop.Plugin.Admin.StyleEditor.Areas.Admin.Controllers.StyleEditorController"/>
+            </summary>
+            <param name="permissionService"></param>
+            <param name="notificationService"></param>
+            <param name="localizationService"></param>
+            <param name="settingService"></param>
+            <param name="settings"></param>
+            <param name="currentDateTimeHelper"></param>
+        </member>
+        <member name="M:Nop.Plugin.Admin.StyleEditor.Areas.Admin.Controllers.StyleEditorController.Configure">
+            <summary>
+            Redirects to the page showing the configuration options for the plugin
+            </summary>
+            <returns>Returns the configuration page</returns>
+        </member>
+        <member name="M:Nop.Plugin.Admin.StyleEditor.Areas.Admin.Controllers.StyleEditorController.EditStyles">
+            <summary>
+            Gets the page showing the configuration options for the plugin
+            </summary>
+            <returns>Returns the configuration page</returns>
+        </member>
+        <member name="M:Nop.Plugin.Admin.StyleEditor.Areas.Admin.Controllers.StyleEditorController.EditStyles(Nop.Plugin.Admin.StyleEditor.Areas.Admin.Models.ConfigurationModel)">
+            <summary>
+            Updates the configuration settings for the plugin
+            </summary>
+            <param name="model">The updated settings</param>
+            <returns>Returns the configuration page</returns>
+        </member>
+        <member name="T:Nop.Plugin.Admin.StyleEditor.Areas.Admin.Models.ConfigurationModel">
+            <summary>
+            The model containing the configuration settings for the plugin
+            </summary>
+        </member>
+        <member name="P:Nop.Plugin.Admin.StyleEditor.Areas.Admin.Models.ConfigurationModel.DisableCustomStyles">
+            <summary>
+            Whether the custom styles should be disabled
+            </summary>
+        </member>
+        <member name="P:Nop.Plugin.Admin.StyleEditor.Areas.Admin.Models.ConfigurationModel.CustomStyles">
+            <summary>
+            The custom styles
+            </summary>
+        </member>
+        <member name="P:Nop.Plugin.Admin.StyleEditor.Areas.Admin.Models.ConfigurationModel.RenderType">
+            <summary>
+            The type of rendering of the styles (inline, file, etc.)
+            </summary>
+        </member>
+        <member name="P:Nop.Plugin.Admin.StyleEditor.Areas.Admin.Models.ConfigurationModel.UseAsync">
+            <summary>
+            Whether the file should be loaded asynchronously
+            </summary>
+        </member>
+        <member name="T:Nop.Plugin.Admin.StyleEditor.Components.CustomStyleComponent">
+            <summary>
+            The widget that includes the custom styles
+            </summary>
+        </member>
+        <member name="M:Nop.Plugin.Admin.StyleEditor.Components.CustomStyleComponent.#ctor(Nop.Plugin.Admin.StyleEditor.Settings.StyleEditorSettings)">
+            <summary>
+            Creates a new <see cref="T:Nop.Plugin.Admin.StyleEditor.Components.CustomStyleComponent"/>
+            </summary>
+        </member>
+        <member name="M:Nop.Plugin.Admin.StyleEditor.Components.CustomStyleComponent.Invoke">
+            <summary>
+            Invokes the widget
+            </summary>
+            <returns>Returns the view of the widget</returns>
+        </member>
+        <member name="T:Nop.Plugin.Admin.StyleEditor.Helpers.CurrentDateTimeHelper">
+            <summary>
+            Provides the current date/time based on DateTime.UtcNow
+            </summary>
+        </member>
+        <member name="P:Nop.Plugin.Admin.StyleEditor.Helpers.CurrentDateTimeHelper.UtcNow">
+            <inheritdoc/>
+        </member>
+        <member name="T:Nop.Plugin.Admin.StyleEditor.Helpers.ICurrentDateTimeHelper">
+            <summary>
+            Provides access to the current date/time
+            </summary>
+        </member>
+        <member name="P:Nop.Plugin.Admin.StyleEditor.Helpers.ICurrentDateTimeHelper.UtcNow">
+            <summary>
+            The current date/time object, in UTC
+            </summary>
+        </member>
+        <member name="T:Nop.Plugin.Admin.StyleEditor.Infrastructure.DependencyRegistrar">
+            <summary>
+            Registers the plugin dependencies
+            </summary>
+        </member>
+        <member name="M:Nop.Plugin.Admin.StyleEditor.Infrastructure.DependencyRegistrar.Register(Microsoft.Extensions.DependencyInjection.IServiceCollection,Nop.Core.Infrastructure.ITypeFinder,Nop.Core.Configuration.AppSettings)">
+            <summary>
+            Register services and interfaces
+            </summary>
+            <param name="services">Collection of service descriptors</param>
+            <param name="typeFinder">Type finder</param>
+            <param name="appSettings">App settings</param>
+        </member>
+        <member name="P:Nop.Plugin.Admin.StyleEditor.Infrastructure.DependencyRegistrar.Order">
+            <summary>
+            Order of this registration
+            </summary>
+        </member>
+        <member name="T:Nop.Plugin.Admin.StyleEditor.Infrastructure.PluginNopStartup">
+            <summary>
+            Handles the startup of the plugin
+            </summary>
+        </member>
+        <member name="M:Nop.Plugin.Admin.StyleEditor.Infrastructure.PluginNopStartup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Configures the services required by the plugin
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:Nop.Plugin.Admin.StyleEditor.Infrastructure.PluginNopStartup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Configures the application
+            </summary>
+            <param name="application"></param>
+        </member>
+        <member name="P:Nop.Plugin.Admin.StyleEditor.Infrastructure.PluginNopStartup.Order">
+            <summary>
+            The order of the startup
+            </summary>
+        </member>
+        <member name="T:Nop.Plugin.Admin.StyleEditor.Infrastructure.ViewLocationExpander">
+            <summary>
+            Configures the locations of views
+            </summary>
+        </member>
+        <member name="M:Nop.Plugin.Admin.StyleEditor.Infrastructure.ViewLocationExpander.PopulateValues(Microsoft.AspNetCore.Mvc.Razor.ViewLocationExpanderContext)">
+            <summary>
+            Populates values
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Nop.Plugin.Admin.StyleEditor.Infrastructure.ViewLocationExpander.ExpandViewLocations(Microsoft.AspNetCore.Mvc.Razor.ViewLocationExpanderContext,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Adds view locations
+            </summary>
+            <param name="context"></param>
+            <param name="viewLocations"></param>
+            <returns>The updated view locations</returns>
+        </member>
+        <member name="T:Nop.Plugin.Admin.StyleEditor.Mapping.NameCompatibility">
+            <summary>
+            Backward compatibility of table naming
+            </summary>
+        </member>
+        <member name="P:Nop.Plugin.Admin.StyleEditor.Mapping.NameCompatibility.TableNames">
+            <inheritdoc/>
+        </member>
+        <member name="P:Nop.Plugin.Admin.StyleEditor.Mapping.NameCompatibility.ColumnName">
+            <inheritdoc/>
+        </member>
+        <member name="T:Nop.Plugin.Admin.StyleEditor.StyleEditorPlugin">
+            <summary>
+            Plugin class handling install/uninstall
+            </summary>
+        </member>
+        <member name="P:Nop.Plugin.Admin.StyleEditor.StyleEditorPlugin.HideInWidgetList">
+            <summary>
+            Whether the widget should be hidden
+            </summary>
+        </member>
+        <member name="M:Nop.Plugin.Admin.StyleEditor.StyleEditorPlugin.#ctor(Nop.Services.Localization.ILocalizationService,Nop.Core.Domain.Cms.WidgetSettings,Nop.Services.Configuration.ISettingService,Nop.Core.IWebHelper,Nop.Services.Security.IPermissionService)">
+            <summary>
+            Creates an instance of <see cref="T:Nop.Plugin.Admin.StyleEditor.StyleEditorPlugin"/>
+            </summary>
+            <param name="localizationService"></param>
+            <param name="widgetSettings"></param>
+            <param name="settingService"></param>
+            <param name="webHelper"></param>
+            <param name="permissionService"></param>
+        </member>
+        <member name="M:Nop.Plugin.Admin.StyleEditor.StyleEditorPlugin.GetConfigurationPageUrl">
+            <summary>
+            Gets a configuration page URL
+            </summary>
+        </member>
+        <member name="M:Nop.Plugin.Admin.StyleEditor.StyleEditorPlugin.InstallAsync">
+            <summary>
+            Install the plugin
+            </summary>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:Nop.Plugin.Admin.StyleEditor.StyleEditorPlugin.UninstallAsync">
+            <summary>
+            Uninstall the plugin
+            </summary>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:Nop.Plugin.Admin.StyleEditor.StyleEditorPlugin.GetWidgetZonesAsync">
+            <summary>
+            Gets the list of widget zones
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nop.Plugin.Admin.StyleEditor.StyleEditorPlugin.GetWidgetViewComponentName(System.String)">
+            <summary>
+            Gets the name of the widget to use
+            </summary>
+            <param name="widgetZone">The widget zone specified</param>
+            <returns>The name of the widget</returns>
+        </member>
+        <member name="M:Nop.Plugin.Admin.StyleEditor.StyleEditorPlugin.ManageSiteMapAsync(Nop.Web.Framework.Menu.SiteMapNode)">
+            <summary>
+            Adds the menu item for the editor page
+            </summary>
+            <param name="rootNode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nop.Plugin.Admin.StyleEditor.Settings.StyleEditorSettings">
+            <summary>
+            The settings of the plugin
+            </summary>
+        </member>
+        <member name="P:Nop.Plugin.Admin.StyleEditor.Settings.StyleEditorSettings.DisableCustomStyles">
+            <summary>
+            Gets or sets whether the custom styles should be disabled
+            </summary>
+        </member>
+        <member name="P:Nop.Plugin.Admin.StyleEditor.Settings.StyleEditorSettings.CustomStyles">
+            <summary>
+            Gets or sets the custom styles
+            </summary>
+        </member>
+        <member name="P:Nop.Plugin.Admin.StyleEditor.Settings.StyleEditorSettings.RenderType">
+            <summary>
+            Gets or sets the render type
+            </summary>
+        </member>
+        <member name="P:Nop.Plugin.Admin.StyleEditor.Settings.StyleEditorSettings.UseAsync">
+            <summary>
+            Gets or sets whether the file should be loaded asynchronously
+            </summary>
+        </member>
+        <member name="P:Nop.Plugin.Admin.StyleEditor.Settings.StyleEditorSettings.Version">
+            <summary>
+            The current version of the styles
+            </summary>
+        </member>
+        <member name="M:Nop.Plugin.Admin.StyleEditor.Settings.StyleEditorSettings.UpdateVersion(Nop.Plugin.Admin.StyleEditor.Helpers.ICurrentDateTimeHelper)">
+            <summary>
+            Updates the version
+            </summary>
+            <param name="currentDateTimeHelper"></param>
+        </member>
+        <member name="P:Nop.Plugin.Admin.StyleEditor.Settings.StyleEditorSettings.CustomStylesPath">
+            <summary>
+            Gets the path to the custom styles, including version
+            </summary>
+        </member>
+        <member name="M:Nop.Plugin.Admin.StyleEditor.Settings.StyleEditorSettings.GenerateView">
+            <summary>
+            Gets the view details for the component
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Nop.Plugin.Admin.StyleEditor.StyleEditorPluginDefaults">
+            <summary>
+            Represents plugin constants
+            </summary>
+        </member>
+        <member name="F:Nop.Plugin.Admin.StyleEditor.StyleEditorPluginDefaults.WIDGETS_CUSTOM_STYLES">
+            <summary>
+            The name of the widget including the custom styles
+            </summary>
+        </member>
+        <member name="T:Nop.Web.Controllers.CustomStyleController">
+            <summary>
+            Handles the serving of custom styles
+            </summary>
+        </member>
+        <member name="M:Nop.Web.Controllers.CustomStyleController.#ctor(Nop.Plugin.Admin.StyleEditor.Settings.StyleEditorSettings)">
+            <summary>
+            Creates an instance of <see cref="T:Nop.Web.Controllers.CustomStyleController"/>
+            </summary>
+            <param name="settings"></param>
+        </member>
+        <member name="M:Nop.Web.Controllers.CustomStyleController.Index">
+            <summary>
+            Returns the custom styles
+            </summary>
+            <returns></returns>
+            <remarks>If custom styles have been disabled, this will return an empty response</remarks>
+        </member>
+    </members>
+</doc>

@@ -78,6 +78,10 @@
     {
       "SystemName": "ExternalAuth.Facebook",
       "Version": "1.68"
+    },
+    {
+      "SystemName": "Admin.StyleEditor",
+      "Version": "1.00"
     }
   ],
   "PluginNamesToUninstall": [],
