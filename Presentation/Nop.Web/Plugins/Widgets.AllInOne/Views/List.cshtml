@@ -1,0 +1,122 @@
+﻿@model Nop.Plugin.Widgets.AllInOnePlugin.Models.AllInOneSearchModel
+@using Nop.Plugin.Widgets.AllInOnePlugin.Models
+@using Nop.Core
+@using Nop.Core.Domain.Common
+@using Nop.Web.Framework.Models.DataTables
+@inject AdminAreaSettings adminAreaSettings
+@inject Nop.Services.Common.IGenericAttributeService genericAttributeService
+@inject IWorkContext workContext
+@{
+    Layout = "_AdminLayout";
+    //page title
+    ViewBag.Title = T("Plugins.Widgets.AllInOne.Manage").Text;
+    //active menu item (system name)
+    Html.SetActiveMenuItemSystemName("AllInOne");
+}
+
+@{
+    const string hideSearchBlockAttributeName = "AllInOnePage.HideSearchBlock";
+    var hideSearchBlock = genericAttributeService.GetAttribute<bool>(workContext.CurrentCustomer, hideSearchBlockAttributeName);
+}
+
+<nop-antiforgery-token />
+<div class="content-header clearfix">
+    <h1 class="pull-left">
+        @T("Plugins.Widgets.AllInOne.Manage")
+    </h1>
+    <div class="pull-right">
+        <a asp-action="Create" class="btn bg-blue">
+            <i class="fa fa-plus-square"></i>
+            @T("Admin.Common.AddNew")
+        </a>
+    </div>
+</div>
+<div class="content">
+    <div class="form-horizontal">
+        <div class="panel-group">
+            <div class="panel panel-default panel-search" @(Model.AvailableStores.SelectionIsNotPossible() ? Html.Raw("style=\"display:none\"") : null)>
+                <div class="panel-body">
+                    <div class="row search-row @(!hideSearchBlock ? "opened" : "")" data-hideAttribute="@hideSearchBlockAttributeName">
+                        <div class="search-text">@T("Admin.Common.Search")</div>
+                        <div class="icon-search"><i class="fa fa-search" aria-hidden="true"></i></div>
+                        <div class="icon-collapse"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+                    </div>
+                    <div class="search-body @(hideSearchBlock ? "closed" : "")">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group" @(Model.AvailableStores.SelectionIsNotPossible() ? Html.Raw("style=\"display:none\"") : null)>
+                                    <div class="col-md-4">
+                                        <nop-label asp-for="SearchStoreId" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <nop-select asp-for="SearchStoreId" asp-items="Model.AvailableStores" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-8 col-md-offset-4">
+                                        <button type="button" id="search-allinones" class="btn btn-primary btn-search">
+                                            <i class="fa fa-search"></i>
+                                            @T("Admin.Common.Search")
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    @await Html.PartialAsync("Table", new DataTablesModel
+                                      {
+                                          Name = "allinones-grid",
+                                          UrlRead = new DataUrl("List", "WidgetsAllInOne", null),
+                                          SearchButtonId = "search-allinones",
+                                          Length = Model.PageSize,
+                                          LengthMenu = Model.AvailablePageSizes,
+                                          Filters = new List<FilterParameter>
+                                          {
+                                              new FilterParameter(nameof(Model.SearchStoreId))
+                                          },
+                                          ColumnCollection = new List<ColumnProperty>
+                                          {
+                                              new ColumnProperty(nameof(AllInOneModel.Name))
+                                              {
+                                                  Title = T("Plugins.Widgets.AllInOne.Fields.Name").Text,
+                                                   Width = "200",
+                                              },
+                                              new ColumnProperty(nameof(AllInOneModel.WidgetZone))
+                                              {
+                                                  Title = T("Plugins.Widgets.AllInOne.Fields.WidgetZone").Text,
+                                                   Width = "200",
+                                              },
+                                               new ColumnProperty(nameof(AllInOneModel.DisplayOrder))
+                                              {
+                                                  Title = T("Plugins.Widgets.AllInOne.Fields.DisplayOrder").Text,
+                                                  Width = "50",
+                                                  ClassName = NopColumnClassDefaults.CenterAll
+                                              },
+                                              new ColumnProperty(nameof(AllInOneModel.Published))
+                                              {
+                                                  Title = T("Plugins.Widgets.AllInOne.Fields.Published").Text,
+                                                  Width = "50",
+                                                  ClassName =  NopColumnClassDefaults.CenterAll,
+                                                  Render = new RenderBoolean()
+                                              },
+
+                                              new ColumnProperty(nameof(AllInOneModel.Id))
+                                              {
+                                                  Title = T("Admin.Common.Edit").Text,
+                                                  Width = "100",
+                                                  ClassName =  NopColumnClassDefaults.Button,
+                                                  Render = new RenderButtonEdit(new DataUrl("~/Admin/WidgetsAllInOne/Edit/"))
+                                              }
+                                          }
+                                      })
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

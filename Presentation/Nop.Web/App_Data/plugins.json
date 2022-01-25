@@ -82,6 +82,14 @@
     {
       "SystemName": "Admin.StyleEditor",
       "Version": "1.00"
+    },
+    {
+      "SystemName": "NopStation.Core",
+      "Version": "4.4.5"
+    },
+    {
+      "SystemName": "NopStation.WidgetPush",
+      "Version": "4.4.3"
     }
   ],
   "PluginNamesToUninstall": [],

@@ -1,0 +1,32 @@
+﻿@model Nop.Plugin.Widgets.AllInOnePlugin.Models.PublicInfoModel
+@{
+    Layout = "";
+}
+
+@{
+    if (Model.CssFiles.Count > 0)
+    {
+        foreach (var fileName in Model.CssFiles)
+        {
+            Html.AppendCssFileParts("~/Plugins/Widgets.AllInOne/Content/" + fileName);
+        }
+    }
+
+    if (Model.JFiles.Count > 0)
+    {
+        foreach (var fileName in Model.JFiles)
+        {
+            Html.AppendScriptParts("~/Plugins/Widgets.AllInOne/Content/" + fileName);
+        }
+    }
+
+
+}
+
+@if (Model.HtmlCodes.Count > 0)
+{
+    foreach (var item in Model.HtmlCodes)
+    {
+        @Html.Raw(item)
+    }
+}

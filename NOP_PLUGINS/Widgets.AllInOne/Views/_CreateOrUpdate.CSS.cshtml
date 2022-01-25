@@ -1,0 +1,43 @@
+﻿@model Nop.Plugin.Widgets.AllInOnePlugin.Models.AllInOneModel
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="form-group">
+                <div class="col-md-9">
+                    <ol>
+                        <li><b>Upload files to Plugins\Widgets.AllInOne\Content\</b></li>
+                        <li>Enter the file names separated by commas</li>
+                        <li><b>JavaScript <span style="color:red;">WITH</span> extention:</b> example.js,example1.js,example2.js</li>
+                        <li><b>CSS <span style="color:red;">WITHOUT</span>  extention:</b> CssExample,CssExample1,CssExample2</li>
+                        <li>
+                            RTL support for css files:
+                            <ul>
+                                <li>Upload both file - (style.css and style.rtl.css)</li>
+                                <li>make sure the RTL file has the same name with a .rtl befor file extension (style.rtl.css)</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-label asp-for="jsFileList" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="jsFileList" />
+                    <span asp-validation-for="jsFileList"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-label asp-for="cssFileList" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="cssFileList" />
+                    <span asp-validation-for="cssFileList"></span> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+

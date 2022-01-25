@@ -1,0 +1,18 @@
+﻿{
+  "Group": "Nop Station",
+  "FriendlyName": "Nop-Station Widget Push",
+  "SupportedVersions": [
+    "4.40"
+  ],
+  "Author": "Jaber Kibria",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.NopStation.WidgetPush.dll",
+  "Description": "This plugin allows to push HTML content anywhere in admin or public site.",
+  "LimitedToStores": [],
+  "LimitedToCustomerRoles": [],
+  "DependsOnSystemNames": [
+    "NopStation.Core"
+  ],
+  "SystemName": "NopStation.WidgetPush",
+  "Version": "4.4.3"
+}

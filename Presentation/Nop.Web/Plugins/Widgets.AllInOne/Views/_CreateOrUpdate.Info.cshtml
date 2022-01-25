@@ -1,0 +1,96 @@
+﻿@model Nop.Plugin.Widgets.AllInOnePlugin.Models.AllInOneModel
+
+<div class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-label asp-for="Name" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="Name" asp-required="true" />
+                    <span asp-validation-for="Name"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-label asp-for="WidgetZone" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="WidgetZone" asp-required="true" />
+                    <span asp-validation-for="WidgetZone"></span>
+                    &nbsp;&nbsp;<a href="http://www.nopcommerce.com/boards/t/25610/widgets-and-widgets-zones-in-310.aspx" target="_blank">Widget Zones List</a>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-label asp-for="HtmlCode" />
+                </div>
+                <div class="col-md-9">
+                    <div style="padding:5px 0 3px 0;"><b>For HTML editor click: Tools - > Source Code</b></div>
+                    <nop-editor asp-for="HtmlCode" asp-template="RichEditor" />
+                    <span asp-validation-for="HtmlCode"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-label asp-for="HtmlCodeExtra" />
+                </div>
+                <div class="col-md-9">
+                    <div style="padding:5px 0 3px 0;"><b>Additional code for the HTML code, used for tags that not supported by TinyMCE editor</b></div>
+                    <nop-textarea asp-for="HtmlCodeExtra"></nop-textarea>
+                    <span asp-validation-for="HtmlCodeExtra"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-label asp-for="Published" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="Published" />
+                    <span asp-validation-for="Published"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-label asp-for="SelectedStoreIds" />
+                </div>
+                <div class="col-md-9">
+                    <nop-select asp-for="SelectedStoreIds" asp-items="Model.AvailableStores" asp-multiple="true" />
+                    <script>
+                            $(document).ready(function() {
+                                var storesIdsInput = $('#@Html.IdFor(model => model.SelectedStoreIds)').data("kendoMultiSelect");
+                                storesIdsInput.setOptions({
+                                    autoClose: false,
+                                    filter: "contains"
+                                });
+
+                                @if (Model.AvailableStores.Count == 0)
+                                {
+                                    <text>
+                                storesIdsInput.setOptions({
+                                    enable: false,
+                                    placeholder: 'No stores available'
+                                });
+                                storesIdsInput._placeholder();
+                                storesIdsInput._enable();
+                                </text>
+                                }
+                            });
+                    </script>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-label asp-for="DisplayOrder" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="DisplayOrder" />
+                    <span asp-validation-for="DisplayOrder"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
