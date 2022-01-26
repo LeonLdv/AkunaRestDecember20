@@ -125,10 +125,10 @@
                                         }
                                     </div>
                                     @await Html.PartialAsync("_ProductTierPrices", Model.TierPrices)
-                                    <div class="form-group email-friend-btn">
-                                        <div class="email-compare-button">
+                                    <!--<div class="form-group email-friend-btn">
+                                        <div class="email-compare-button">-->
                                             <!--wishlist, compare, email a friend-->
-                                            @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ProductDetailsInsideOverviewButtonsBefore, additionalData = Model })
+                                            <!--@await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ProductDetailsInsideOverviewButtonsBefore, additionalData = Model })
                                             @{
                                                 var dataDictAddToWishlist = new ViewDataDictionary(ViewData);
                                                 dataDictAddToWishlist.TemplateInfo.HtmlFieldPrefix = $"addtocart_{Model.Id}";
@@ -138,7 +138,7 @@
                                             @await Html.PartialAsync("_ProductEmailAFriendButton", Model)
                                             @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ProductDetailsInsideOverviewButtonsAfter, additionalData = Model })
                                         </div>
-                                    </div>
+                                    </div>-->
                                     @await Html.PartialAsync("_ShareButton", Model)
                                     @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ProductDetailsOverviewBottom, additionalData = Model })
                                 </div>
