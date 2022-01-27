@@ -8503,4 +8503,51 @@ h4 {
     float: left;
 }
 
+h4 {
+    line-height: 1.35;
+    font-weight: 500;
+    color: #3A7600;
+    font-size: 15px;
+    text-align: center;
+    border-bottom: 1px solid #e5dcc3;
+    padding: 0 0 1px;
+    margin: 0 0 15px;
+}
+
+.page-title-akuna h1 {
+    margin: 0 10px;
+    text-transform: none !important;
+    text-align: center;
+    line-height: 30px;
+    color: #3a7600;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.cellsBlock {
+    width: 100%;
+    display: table;
+    padding-top: 10px;
+}
+
+.cellRight3 {
+    width: 450px;
+    float: right;
+}
+
+.cellLeft3 {
+    width: 450px;
+    float: left;
+    border-right: 1px solid #e5dcc3;
+}
+
+.std-PaymentAndDelivery {
+    width: 950px;
+    height: 800px;
+    color: black;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    padding: 45px
+}
+
 
