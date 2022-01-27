@@ -150,14 +150,14 @@
                                         {
                                             <li class="active"><a href="#description" data-toggle="tab">@T("products.compare.fulldescription")</a></li>
                                         }
-                                        @if (!string.IsNullOrEmpty(@Html.PartialAsync("_ProductTags", Model).ToString()))
+                                        @*@if (!string.IsNullOrEmpty(@Html.PartialAsync("_ProductTags", Model).ToString()))
                                         {
                                             <li><a href="#tags" data-toggle="tab">@T("Products.Tags")</a></li>
                                         }
                                         @if (!string.IsNullOrEmpty(@Html.PartialAsync("_ProductSpecifications", Model).ToString()))
                                         {
                                             <li><a href="#specification" data-toggle="tab">@T("Products.Specs")</a></li>
-                                        }
+                                        }*@
                                     </ul>
                                     <div class="tab-content">
                                         @if (!string.IsNullOrEmpty(Model.FullDescription))
