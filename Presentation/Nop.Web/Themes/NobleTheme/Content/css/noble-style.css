@@ -8457,3 +8457,37 @@ ul {
     End 
 
 */
+
+/* -- About company specified styles -- */
+
+.std-aboutCompany {
+    width: 780px;
+    height: 1500px;
+    color: black;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    padding: 45px;
+}
+
+.cellsBlock1 {
+    width: 100%;
+    display: table;
+    padding-left: 100px;
+}
+
+.cellLeft4 {
+    width: 10%;
+    float: left;
+}
+
+.cellMiddle4 {
+    width: 5%;
+    float: left;
+}
+
+.cellRight4 {
+    width: 85%;
+    float: left;
+}
+
+
