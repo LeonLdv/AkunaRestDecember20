@@ -259,16 +259,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-4">
+                    @*<div class="col-sm-6 col-md-4">
                         <div class="cart-collaterals">
                             <div class="deals">
                                 @await Html.PartialAsync("_GiftCardBox", Model.GiftCardBox)
                             </div>
                         </div>
-                    </div>
+                    </div>*@
                 }
 
-                <div class="col-xs-12 col-md-4 pull-right">
+                <div class="col-xs-12 col-md-4 pull-left">
                     <div class="totals">
                         @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.OrderSummaryTotals })
                         @await Component.InvokeAsync("OrderTotals", new { isEditable = Model.IsEditable })
@@ -311,7 +311,7 @@
                                     </script>
                                 </div>
                             }
-                            <div class="checkout-buttons">
+                            <div class="checkout-buttons"><center>
                                 @if (string.IsNullOrEmpty(Model.MinOrderSubtotalWarning) && !Model.HideCheckoutButton)
                                 {
                                     <script asp-location="Footer">
@@ -349,7 +349,7 @@
                                             <i class="fa fa-arrow-circle-right"></i>
                                         </button>
                                     }
-                                }
+                                }</center>
                             </div>
                             <div class="addon-buttons">
                                 @*Payment method buttons (e.g. GoogleCheckoutButton, Paypal Express)*@
