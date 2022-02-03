@@ -8386,13 +8386,19 @@ button {
 
 /*Галочка для листа*/
 
-ul {
+.panel-body ul {
     list-style-image: url('/images/uploaded/GALOCHKA.png');
 }
 
-/*Флаги*/
+ul {
+    list-style: none;
+}
 
-.flagsOfManufacturers {
+.std ul {
+    list-style-image: url('/images/uploaded/GALOCHKA.png');
+}
+    /*Флаги*/
+    .flagsOfManufacturers {
     width: 20px !important;
     height: 12px !important;
 }
@@ -8633,8 +8639,12 @@ ul.form-list {
 /* End */
 
 
-/* Nova posta styles */
+/*  Fixing useless GALOCHKA at Header list  */
 
+
+/*.col-md-3 .col-md-9 header-upper-right pull-right .header-links-wrapper .header-links header-top-right ul {
+    list-style-type:none
+}*/
 
 
 
