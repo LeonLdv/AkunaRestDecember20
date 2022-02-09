@@ -134,13 +134,13 @@
             </div>
 
         }
-        @if (Model.StreetAddress2Enabled)
+        @*@if (Model.StreetAddress2Enabled)
         {
             <div class="form-group">
                 <label asp-for="Address2" class="control-label col-sm-2 col-md-2" asp-postfix=":"></label>
                 <div class="visible-xs form-title-rquired"><nop-required /></div>
                 <div class="col-sm-6 col-md-6">
-                    <input asp-for="Address2" class="form-control" />
+                    <input asp-for="Address2" class="form-control" />                                                      // Adittional adress
                 </div>
                 <div class="col-sm-4 col-md-4">
                     @if (Model.StreetAddress2Required)
@@ -150,14 +150,14 @@
                     <span asp-validation-for="Address2"></span>
                 </div>
             </div>
-        }
-        @if (Model.ZipPostalCodeEnabled)
+        }*@
+        @*@if (Model.ZipPostalCodeEnabled)
         {
             <div class="form-group">
                 <label asp-for="ZipPostalCode" class="control-label col-sm-2 col-md-2" asp-postfix=":"></label>
                 <div class="visible-xs form-title-rquired"><nop-required /></div>
                 <div class="col-sm-6 col-md-6">
-                    <input asp-for="ZipPostalCode" class="form-control" />
+                    <input asp-for="ZipPostalCode" class="form-control" />                                            // Индекс
                 </div>
                 <div class="col-sm-4 col-md-4">
                     @if (Model.ZipPostalCodeRequired)
@@ -167,7 +167,7 @@
                     <span asp-validation-for="ZipPostalCode"></span>
                 </div>
             </div>
-        }
+        }*@
         @if (Model.PhoneEnabled)
         {
             <div class="form-group">
@@ -185,13 +185,13 @@
                 </div>
             </div>
         }
-        @if (Model.FaxEnabled)
+        @*@if (Model.FaxEnabled)
         {
             <div class="form-group">
                 <label asp-for="FaxNumber" class="control-label col-sm-2 col-md-2" asp-postfix=":"></label>
                 <div class="visible-xs form-title-rquired"><nop-required /></div>
                 <div class="col-sm-6 col-md-6">
-                    <input asp-for="FaxNumber" class="form-control" />
+                    <input asp-for="FaxNumber" class="form-control" />                                                    // Fax
                 </div>
                 <div class="col-sm-4 col-md-4">
                     @if (Model.FaxRequired)
@@ -201,7 +201,7 @@
                     <span asp-validation-for="FaxNumber"></span>
                 </div>
             </div>
-        }
+        }*@
         @if (Model.CustomAddressAttributes.Count > 0)
         {
             @await Html.PartialAsync("_AddressAttributes", Model.CustomAddressAttributes)
