@@ -246,7 +246,10 @@ a, .owl-prev, .owl-next, .login-page .remember-me .checkbox label {
 
 .search-box {
     float: right;
+    width: 745px !important
 }
+
+    
 
     .search-box .ui-menu .ui-menu-item a.ui-state-focus, .search-box .ui-menu .ui-menu-item a.ui-state-active {
         margin-top: 0px !important;
@@ -525,6 +528,7 @@ a, .owl-prev, .owl-next, .login-page .remember-me .checkbox label {
 }
 
 .search-box .btn.search-box-button {
+    margin-top: 18px;
     font-size: 0;
     background: url("../images/search-icon.png") no-repeat center center #65c178;
     border-radius: 0px;
@@ -2385,7 +2389,8 @@ a:focus {
     height: 34px;
     padding: 0px 12px;
     margin-right: -3px;
-    width: 210px;
+    margin-top: 18px;
+    width: 660px;
     background: #e5e5e5;
     border: none;
     box-shadow: none;
@@ -8173,6 +8178,24 @@ button {
     padding: 45px;
 }
 
+.std-1 {
+    width: 780px;
+    height: 380px;
+    color: black;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    padding: 29px;
+}
+
+.std-2 {
+    width: 780px;
+    height: 3250px;
+    color: black;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    padding: 45px;
+}
+
 .cellsBlockImage {
     width: 720px;
     height: 150px;
@@ -8645,6 +8668,8 @@ ul.form-list {
 /*.col-md-3 .col-md-9 header-upper-right pull-right .header-links-wrapper .header-links header-top-right ul {
     list-style-type:none
 }*/
+
+
 
 
 
