@@ -8172,7 +8172,7 @@ button {
 .std {
     width: 780px;
     height: 3550px;
-    color: black;
+    color: black;   
     font-size: 14px;
     font-family: "Open Sans", sans-serif;
     padding: 45px;
@@ -8500,7 +8500,7 @@ h4 {
 
 */
 
-/* -- About company specified styles -- */  
+/* -- About company specified styles -- */
 
 .std-aboutCompany {
     width: 780px;
@@ -8509,7 +8509,15 @@ h4 {
     font-size: 14px;
     font-family: "Open Sans", sans-serif;
     padding: 45px;
+
+    border: 1px solid #ccc;
+    margin-left: 230px;
+    -webkit-border-radius: 8px;
 }
+
+
+    
+
 
 .cellsBlock1 {
     width: 100%;
@@ -8576,7 +8584,7 @@ h4 {
     color: black;
     font-size: 14px;
     font-family: "Open Sans", sans-serif;
-    padding: 45px
+    padding: 5px
 }
 
 .page-title-akuna-aboutcompany{
