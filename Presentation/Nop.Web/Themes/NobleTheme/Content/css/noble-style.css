@@ -8409,7 +8409,7 @@ button {
 
 /*Галочка для листа*/
 
-.panel-body ul {
+.panel-body .row ul {
     list-style-image: url('/images/uploaded/GALOCHKA.png');
 }
 
@@ -8420,6 +8420,8 @@ ul {
 .std ul {
     list-style-image: url('/images/uploaded/GALOCHKA.png');
 }
+
+
     /*Флаги*/
     .flagsOfManufacturers {
     width: 20px !important;
@@ -8575,7 +8577,7 @@ h4 {
 .cellLeft3 {
     width: 450px;
     float: left;
-    border-right: 1px solid #e5dcc3;
+    
 }
 
 .std-PaymentAndDelivery {
