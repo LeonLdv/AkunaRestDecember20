@@ -1,0 +1,12 @@
+{
+  "Group": "Nova poshta shipping system",
+  "FriendlyName": "Nova Poshta shipping",
+  "SystemName": "Shipping.NovaPoshta",
+  "Version": "1.0",
+  "SupportedVersions": [ "4.40" ],
+  "Author": "Leon dev",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Shipping.NovaPoshta.dll",
+  "Description": "This plugin adds a Nova Poshta shipping system(Which is Ukranian most popular shipping) into your store."
+}
+
