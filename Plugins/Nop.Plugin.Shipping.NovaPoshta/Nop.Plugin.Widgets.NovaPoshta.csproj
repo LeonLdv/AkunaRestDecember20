@@ -14,14 +14,15 @@
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\nopCommerce\nopCommerce_4.40.4\Libraries\Nop.Data\Nop.Data.csproj" />
-    <ProjectReference Include="..\..\..\..\..\nopCommerce\nopCommerce_4.40.4\Libraries\Nop.Services\Nop.Services.csproj" />
-    <ProjectReference Include="..\..\..\..\..\nopCommerce\nopCommerce_4.40.4\Presentation\Nop.Web.Framework\Nop.Web.Framework.csproj" />
-    <ProjectReference Include="..\..\..\..\..\nopCommerce\nopCommerce_4.40.4\Presentation\Nop.Web\Nop.Web.csproj" />
-    <ClearPluginAssemblies Include="$(MSBuildProjectDirectory)\..\..\Build\ClearPluginAssemblies.proj" />
+    <Compile Remove="Model\**" />
+    <EmbeddedResource Remove="Model\**" />
+    <None Remove="Model\**" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\" />
+    <ProjectReference Include="..\..\..\..\..\nopCommerce\nopCommerce_4.40.4\Libraries\Nop.Data\Nop.Data.csproj" />
+    <ProjectReference Include="..\..\..\..\..\nopCommerce\nopCommerce_4.40.4\Libraries\Nop.Services\Nop.Services.csproj" />
+    <ProjectReference Include="..\..\..\..\..\nopCommerce\nopCommerce_4.40.4\Presentation\Nop.Web\Nop.Web.csproj" />
+    <ClearPluginAssemblies Include="$(MSBuildProjectDirectory)\..\..\Build\ClearPluginAssemblies.proj" />
   </ItemGroup>
   <!-- This target execute after "Build" target -->
   <ItemGroup>
