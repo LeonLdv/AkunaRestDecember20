@@ -48,10 +48,6 @@
       "Version": "1.16"
     },
     {
-      "SystemName": "Shipping.UPS",
-      "Version": "1.65"
-    },
-    {
       "SystemName": "Tax.Avalara",
       "Version": "2.41"
     },
