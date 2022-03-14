@@ -1,12 +1,12 @@
 {
-  "Group": "Nova poshta shipping system",
+  "Group": "Nova poshta shipping widget",
   "FriendlyName": "Nova Poshta shipping",
-  "SystemName": "Shipping.NovaPoshta",
+  "SystemName": "Widgets.NovaPoshta",
   "Version": "1.0",
   "SupportedVersions": [ "4.40" ],
   "Author": "Leon dev",
   "DisplayOrder": 1,
-  "FileName": "Nop.Plugin.Shipping.NovaPoshta.dll",
-  "Description": "This plugin adds a Nova Poshta shipping system(Which is Ukranian most popular shipping) into your store."
+  "FileName": "Nop.Plugin.Widgets.NovaPoshta.dll",
+  "Description": "This plugin adds a Nova Poshta shipping widget(Which is Ukranian most popular shipping) into your store."
 }
 
