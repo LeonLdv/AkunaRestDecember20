@@ -74,14 +74,13 @@
     {
       "SystemName": "ExternalAuth.Facebook",
       "Version": "1.68"
+    },
+    {
+      "SystemName": "Shipping.UPS",
+      "Version": "1.65"
     }
   ],
   "PluginNamesToUninstall": [],
   "PluginNamesToDelete": [],
-  "PluginNamesToInstall": [
-    {
-      "Item1": "Shipping.UPS",
-      "Item2": "8e555ba6-d152-4557-8047-c894eb7120e9"
-    }
-  ]
+  "PluginNamesToInstall": []
 }
