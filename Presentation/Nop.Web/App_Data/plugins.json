@@ -78,14 +78,13 @@
     {
       "SystemName": "Shipping.UPS",
       "Version": "1.65"
+    },
+    {
+      "SystemName": "Admin.StyleEditor",
+      "Version": "1.00"
     }
   ],
   "PluginNamesToUninstall": [],
   "PluginNamesToDelete": [],
-  "PluginNamesToInstall": [
-    {
-      "Item1": "Admin.StyleEditor",
-      "Item2": "8e555ba6-d152-4557-8047-c894eb7120e9"
-    }
-  ]
+  "PluginNamesToInstall": []
 }
