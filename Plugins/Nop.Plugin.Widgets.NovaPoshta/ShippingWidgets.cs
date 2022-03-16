@@ -10,7 +10,7 @@ namespace Nop.Plugin.Widgets.NovaPoshta
 {
     public class ShippingWidgets : BasePlugin, IWidgetPlugin
     {
-        public bool HideInWidgetList => false;
+        public bool HideInWidgetList => true;
 
         string IWidgetPlugin.GetWidgetViewComponentName(string widgetZone)
         {
