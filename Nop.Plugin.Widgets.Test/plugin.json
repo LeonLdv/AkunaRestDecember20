@@ -1,0 +1,14 @@
+{
+  "Group": "Test plugin",
+  "FriendlyName": "Test Standard",
+  "SystemName": "Widgets.Test",
+  "Version": "1.0",
+  "SupportedVersions": [ "4.40.4" ],
+  "Author": "Leon dev",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Widgets.Test.dll",
+  "Description": "Test plugin",
+  "LimitedToStores": "",
+  "LimitedToCustomerRoles": "",
+  "DependsOnSystemNames": ""
+}
